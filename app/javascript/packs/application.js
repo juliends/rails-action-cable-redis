@@ -8,5 +8,4 @@ const suscribe = () => {
     },
   });
 }
-
 suscribe();
