@@ -1,7 +1,7 @@
 class ResultNotificationsChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "results"
-    puts "connected!"
+    stream_from "results-#{params[:id]}"
+    p params
   end
 
   def unsubscribed
