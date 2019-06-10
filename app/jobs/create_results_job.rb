@@ -3,7 +3,7 @@ class CreateResultsJob < ApplicationJob
 
   def perform(id)
     10.times do 
-      sleep(0..2).to_a.sample
+      sleep(rand(2))
       @result = Result.new(title: "Hello", content: "It's me <3")
       ActionCable.server.broadcast(
         "results-#{id}",
